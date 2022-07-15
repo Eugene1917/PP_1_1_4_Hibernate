@@ -8,16 +8,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Properties;
 
 public class Util {
-    private static final String URL = "jdbc:mysql://localhost:3306/mysql";
-    private static final String USER = "root";
-    private static final String PASSWORD = "12345";
 
     private static SessionFactory sessionFactory;
 
@@ -27,9 +20,9 @@ public class Util {
                 Configuration configuration = new Configuration();
                 Properties properties = new Properties();
                 properties.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-                properties.put(Environment.URL, URL);
-                properties.put(Environment.USER, USER);
-                properties.put(Environment.PASS, PASSWORD);
+                properties.put(Environment.URL, "jdbc:mysql://localhost:3306/mysql");
+                properties.put(Environment.USER, "root");
+                properties.put(Environment.PASS, "12345");
                 properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
                 properties.put(Environment.HBM2DDL_AUTO, "update");
                 properties.put(Environment.SHOW_SQL, "false");

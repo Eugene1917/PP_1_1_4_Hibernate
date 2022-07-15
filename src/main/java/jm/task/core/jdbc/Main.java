@@ -11,7 +11,7 @@ public class Main {
         User user1 = new User("Руслан","Белый",(byte)33);
         User user2 = new User("Нурлан","Сабуров",(byte)23);
         User user3 = new User("Сергей","Щербаков",(byte)27);
-        User user4 = new User("Иван","Усович",(byte)25);
+        User user4 = new User("Ваня","Усович",(byte)25);
 
         userService.saveUser(user1.getName(), user1.getLastName(), user1.getAge());
         System.out.println("User: " + user1.getName() + " добавлен");
